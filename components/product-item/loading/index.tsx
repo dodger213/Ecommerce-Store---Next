@@ -3,7 +3,7 @@ const ProductItemLoading = () => (
     <div className="product__image">
 
     </div>
-    
+
     <div className="product__description">
       <h3></h3>
       <div className={"product__price"} >
