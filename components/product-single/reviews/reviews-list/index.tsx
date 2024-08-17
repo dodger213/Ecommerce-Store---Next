@@ -13,11 +13,11 @@ const ReviewsList = ({ reviews }: ReviewsListType) => {
       {reviews.map((review, index) => (
         <div key={index} className="review-item">
           <div className="review__avatar">
-            <img src={ review.avatar } alt="avatar" />
+            <img src={review.avatar} alt="avatar" />
           </div>
-          
+
           <div className="review__content">
-            <h3>{ review.name }</h3>
+            <h3>{review.name}</h3>
             <Rater total={5} interactive={false} rating={review.punctuation} />
             <div className="review__comment" dangerouslySetInnerHTML={createMarkup(review.description)}>
             </div>
@@ -27,6 +27,5 @@ const ReviewsList = ({ reviews }: ReviewsListType) => {
     </section>
   );
 };
-  
+
 export default ReviewsList;
-    

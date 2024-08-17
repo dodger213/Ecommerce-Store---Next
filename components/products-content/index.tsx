@@ -3,7 +3,7 @@ import List from './list';
 
 const ProductsContent = () => {
   const [orderProductsOpen, setOrderProductsOpen] = useState(false);
-  
+
   return (
     <section className="products-content">
       <div className="products-content__intro">
@@ -33,6 +33,5 @@ const ProductsContent = () => {
     </section>
   );
 };
-  
+
 export default ProductsContent
-  
