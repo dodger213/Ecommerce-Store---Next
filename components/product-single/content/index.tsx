@@ -27,14 +27,14 @@ const Content = ({ product }: ProductContent) => {
 
   const toggleFav = () => {
     dispatch(toggleFavProduct(
-      { 
+      {
         id: product.id,
       }
     ))
   }
 
   const addToCart = () => {
-    const productToSave: ProductStoreType = { 
+    const productToSave: ProductStoreType = {
       id: product.id,
       name: product.name,
       thumb: product.images ? product.images[0] : '',
@@ -60,9 +60,9 @@ const Content = ({ product }: ProductContent) => {
         <h2 className="product__name">{product.name}</h2>
 
         <div className="product__prices">
-          <h4>${ product.currentPrice }</h4>
+          <h4>${product.currentPrice}</h4>
           {product.discount &&
-            <span>${ product.price }</span>
+            <span>${product.price}</span>
           }
         </div>
       </div>
@@ -72,13 +72,13 @@ const Content = ({ product }: ProductContent) => {
           <h5>Color:</h5>
           <div className="checkbox-color-wrapper">
             {productsColors.map(type => (
-              <CheckboxColor 
-                key={type.id} 
-                type={'radio'} 
-                name="product-color" 
+              <CheckboxColor
+                key={type.id}
+                type={'radio'}
+                name="product-color"
                 color={type.color}
                 valueName={type.label}
-                onChange={onColorSet} 
+                onChange={onColorSet}
               />
             ))}
           </div>
@@ -108,7 +108,7 @@ const Content = ({ product }: ProductContent) => {
                 +
               </button>
             </div>
-            
+
             <button type="submit" onClick={() => addToCart()} className="btn btn--rounded btn--yellow">Add to cart</button>
             <button type="button" onClick={toggleFav} className={`btn-heart ${isFavourite ? 'btn-heart--active' : ''}`}><i className="icon-heart"></i></button>
           </div>
@@ -117,6 +117,5 @@ const Content = ({ product }: ProductContent) => {
     </section>
   );
 };
-  
+
 export default Content;
-    
