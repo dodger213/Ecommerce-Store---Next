@@ -13,7 +13,6 @@ const ProductsContent = () => {
       {!data &&
         <ProductsLoading />
       }
-
       {data &&
         <section className="products-list">
           {data.map((item: ProductTypeList) => (
