@@ -21,6 +21,5 @@ const Gallery = ({ images }: GalleryProductType) => {
     </section>
   );
 };
-  
+
 export default Gallery;
-  

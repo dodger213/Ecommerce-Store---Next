@@ -12,5 +12,5 @@ const ProductsLoading = () => {
     </section>
   );
 };
-  
+
 export default ProductsLoading

@@ -1,10 +1,10 @@
 import Rater from 'react-rater';
 import { PunctuationType } from 'types';
 
-const Punctuation = ({ votes, punctuation, countOpinions }: PunctuationType) => { 
+const Punctuation = ({ votes, punctuation, countOpinions }: PunctuationType) => {
   const percentageBar = (count: number) => {
-    return (count*100)/countOpinions;
-  } 
+    return (count * 100) / countOpinions;
+  }
 
   return (
     <section className="product-punctuation">
@@ -13,7 +13,7 @@ const Punctuation = ({ votes, punctuation, countOpinions }: PunctuationType) => 
         <Rater total={5} interactive={false} rating={punctuation} />
         <p><i className="icon-avatar"></i>{countOpinions} all opinions</p>
       </div>
-      
+
       <div className="product-punctuation__rates">
         <ul className="punctuations-lists">
           {votes.map((vote) => (
@@ -21,7 +21,7 @@ const Punctuation = ({ votes, punctuation, countOpinions }: PunctuationType) => 
               <Rater total={1} interactive={false} rating={1} />
               <span>{vote.value}</span>
               <div className="punctuation-item__bar">
-                <div style={{ width: percentageBar(vote.count)+'%' }} className="punctuation-item__bar__current"></div>
+                <div style={{ width: percentageBar(vote.count) + '%' }} className="punctuation-item__bar__current"></div>
               </div>
             </li>
           ))}
@@ -34,6 +34,5 @@ const Punctuation = ({ votes, punctuation, countOpinions }: PunctuationType) => 
     </section>
   );
 };
-  
+
 export default Punctuation;
-    
