@@ -24,5 +24,5 @@ const CheckoutItems = () => {
   )
 };
 
-  
+
 export default CheckoutItems
