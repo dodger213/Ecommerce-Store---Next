@@ -16,6 +16,5 @@ const Products = () => (
     <Footer />
   </Layout>
 )
-  
+
 export default Products
-  

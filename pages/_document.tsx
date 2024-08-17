@@ -10,7 +10,7 @@ export default class CustomDocument extends Document<DocumentProps> {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentProps> {
     const initialProps = await Document.getInitialProps(ctx)
 
-    // Check if in production
+    // Check if in production or not
     const isProduction = process.env.NODE_ENV === 'production'
 
     return {

@@ -1,8 +1,8 @@
 import Layout from '../layouts/Main';
 import Link from 'next/link';
 import { useForm } from "react-hook-form";
-import { server } from '../utils/server'; 
-import { postData } from '../utils/services'; 
+import { server } from '../utils/server';
+import { postData } from '../utils/services';
 
 type LoginMail = {
   email: string;
@@ -33,15 +33,15 @@ const LoginPage = () => {
 
           <div className="form-block">
             <h2 className="form-block__title">Log in</h2>
-            <p className="form-block__description">Lorem Ipsum is simply dummy text of the printing and typesetting 
-            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-            
+            <p className="form-block__description">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
               <div className="form__input-row">
-                <input 
-                  className="form__input" 
-                  placeholder="email" 
-                  type="text" 
+                <input
+                  className="form__input"
+                  placeholder="email"
+                  type="text"
                   name="email"
                   ref={register({
                     required: true,
@@ -49,24 +49,24 @@ const LoginPage = () => {
                   })}
                 />
 
-                {errors.email && errors.email.type === 'required' && 
+                {errors.email && errors.email.type === 'required' &&
                   <p className="message message--error">This field is required</p>
                 }
 
-                {errors.email && errors.email.type === 'pattern' && 
+                {errors.email && errors.email.type === 'pattern' &&
                   <p className="message message--error">Please write a valid email</p>
                 }
               </div>
-              
+
               <div className="form__input-row">
-                <input 
-                  className="form__input" 
-                  type="password" 
-                  placeholder="Password" 
+                <input
+                  className="form__input"
+                  type="password"
+                  placeholder="Password"
                   name="password"
                   ref={register({ required: true })}
                 />
-                {errors.password && errors.password.type === 'required' && 
+                {errors.password && errors.password.type === 'required' &&
                   <p className="message message--error">This field is required</p>
                 }
               </div>
@@ -74,10 +74,10 @@ const LoginPage = () => {
               <div className="form__info">
                 <div className="checkbox-wrapper">
                   <label htmlFor="check-signed-in" className={`checkbox checkbox--sm`}>
-                    <input 
-                      type="checkbox" 
-                      name="keepSigned" 
-                      id="check-signed-in" 
+                    <input
+                      type="checkbox"
+                      name="keepSigned"
+                      id="check-signed-in"
                       ref={register({ required: false })}
                     />
                     <span className="checkbox__check"></span>
@@ -103,6 +103,5 @@ const LoginPage = () => {
     </Layout>
   )
 }
-  
+
 export default LoginPage
-  
