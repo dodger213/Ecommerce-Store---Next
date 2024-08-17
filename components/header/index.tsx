@@ -12,17 +12,17 @@ type HeaderType = {
 
 const Header = ({ isErrorPage }: HeaderType) => {
   const router = useRouter();
-  const { cartItems } = useSelector((state: RootState)  => state.cart);
-  const arrayPaths = ['/'];  
+  const { cartItems } = useSelector((state: RootState) => state.cart);
+  const arrayPaths = ['/'];
 
-  const [onTop, setOnTop] = useState(( !arrayPaths.includes(router.pathname) || isErrorPage ) ? false : true);
+  const [onTop, setOnTop] = useState((!arrayPaths.includes(router.pathname) || isErrorPage) ? false : true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const navRef = useRef(null);
   const searchRef = useRef(null);
 
   const headerClass = () => {
-    if(window.pageYOffset === 0) {
+    if (window.pageYOffset === 0) {
       setOnTop(true);
     } else {
       setOnTop(false);
@@ -30,12 +30,12 @@ const Header = ({ isErrorPage }: HeaderType) => {
   }
 
   useEffect(() => {
-    if(!arrayPaths.includes(router.pathname) || isErrorPage) {
+    if (!arrayPaths.includes(router.pathname) || isErrorPage) {
       return;
     }
 
     headerClass();
-    window.onscroll = function() {
+    window.onscroll = function () {
       headerClass();
     };
   }, []);
@@ -52,7 +52,7 @@ const Header = ({ isErrorPage }: HeaderType) => {
   useOnClickOutside(navRef, closeMenu);
   useOnClickOutside(searchRef, closeSearch);
 
-  return(
+  return (
     <header className={`site-header ${!onTop ? 'site-header--fixed' : ''}`}>
       <div className="container">
         <Link href="/">
@@ -72,13 +72,13 @@ const Header = ({ isErrorPage }: HeaderType) => {
             <form className={`search-form`}>
               <i className="icon-cancel" onClick={() => setSearchOpen(!searchOpen)}></i>
               <input type="text" name="search" placeholder="Enter the product you are looking for" />
-            </form>  
-            <i onClick={() => setSearchOpen(!searchOpen)}  className="icon-search"></i>
+            </form>
+            <i onClick={() => setSearchOpen(!searchOpen)} className="icon-search"></i>
           </button>
           <Link href="/cart">
             <button className="btn-cart">
               <i className="icon-cart"></i>
-              {cartItems.length > 0 && 
+              {cartItems.length > 0 &&
                 <span className="btn-cart__count">{cartItems.length}</span>
               }
             </button>
@@ -86,8 +86,8 @@ const Header = ({ isErrorPage }: HeaderType) => {
           <Link href="/login">
             <button className="site-header__btn-avatar"><i className="icon-avatar"></i></button>
           </Link>
-          <button 
-            onClick={() => setMenuOpen(true)} 
+          <button
+            onClick={() => setMenuOpen(true)}
             className="site-header__btn-menu">
             <i className="btn-hamburger"><span></span></i>
           </button>
