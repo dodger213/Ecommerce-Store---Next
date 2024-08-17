@@ -1,8 +1,8 @@
 import Layout from '../layouts/Main';
 import Link from 'next/link';
 import { useForm } from "react-hook-form";
-import { server } from '../utils/server'; 
-import { postData } from '../utils/services'; 
+import { server } from '../utils/server';
+import { postData } from '../utils/services';
 
 type ForgotMail = {
   email: string;
@@ -32,13 +32,13 @@ const ForgotPassword = () => {
           <div className="form-block">
             <h2 className="form-block__title">Forgot your password?</h2>
             <p className="form-block__description">Enter your email or phone number and recover your account</p>
-            
+
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
               <div className="form__input-row">
-                <input 
-                  className="form__input" 
-                  placeholder="email" 
-                  type="text" 
+                <input
+                  className="form__input"
+                  placeholder="email"
+                  type="text"
                   name="email"
                   ref={register({
                     required: true,
@@ -46,24 +46,24 @@ const ForgotPassword = () => {
                   })}
                 />
 
-                {errors.email && errors.email.type === 'required' && 
+                {errors.email && errors.email.type === 'required' &&
                   <p className="message message--error">This field is required</p>
                 }
 
-                {errors.email && errors.email.type === 'pattern' && 
+                {errors.email && errors.email.type === 'pattern' &&
                   <p className="message message--error">Please write a valid email</p>
                 }
               </div>
-              
+
               <div className="form__input-row">
-                <input 
-                  className="form__input" 
-                  type="password" 
-                  placeholder="Password" 
+                <input
+                  className="form__input"
+                  type="password"
+                  placeholder="Password"
                   name="password"
                   ref={register({ required: true })}
                 />
-                {errors.password && errors.password.type === 'required' && 
+                {errors.password && errors.password.type === 'required' &&
                   <p className="message message--error">This field is required</p>
                 }
               </div>
@@ -77,5 +77,5 @@ const ForgotPassword = () => {
     </Layout>
   )
 }
-  
+
 export default ForgotPassword
