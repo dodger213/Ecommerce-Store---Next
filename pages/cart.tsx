@@ -6,6 +6,5 @@ const Products = () => (
     <ShoppingCart />
   </Layout>
 )
-  
+
 export default Products
-  
