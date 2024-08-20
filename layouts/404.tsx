@@ -14,13 +14,11 @@ export default ({ children, title = 'Next.js Ecommerce' }: LayoutType) => {
   return (
     <div className="app-main">
       <Head>
-        <title>Page not found &mdash; { title }</title>
+        <title>Page not found &mdash; {title}</title>
       </Head>
-
       <Header isErrorPage />
-
       <main className={(pathname !== '/' ? 'main-page' : '')}>
-        { children }
+        {children}
       </main>
     </div>
   )
