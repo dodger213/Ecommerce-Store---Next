@@ -11,7 +11,7 @@ export default class CustomDocument extends Document<DocumentProps> {
     const initialProps = await Document.getInitialProps(ctx)
 
     // Check if in production or not
-    const isProduction = process.env.NODE_ENV === 'production'
+    const isProduction = process.env.NODE_ENV === 'production';
 
     return {
       ...initialProps,
@@ -20,7 +20,7 @@ export default class CustomDocument extends Document<DocumentProps> {
   }
 
   render() {
-    const { isProduction } = this.props
+    const { isProduction } = this.props;
 
     return (
       <html lang="en">
