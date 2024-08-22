@@ -15,7 +15,6 @@ const ForgotPassword = () => {
     const res = await postData(`${server}/api/login`, {
       email: data.email,
     });
-
     console.log(res);
   };
 
@@ -67,11 +66,9 @@ const ForgotPassword = () => {
                   <p className="message message--error">This field is required</p>
                 }
               </div>
-
               <button type="submit" className="btn btn--rounded btn--yellow btn-submit">Reset password</button>
             </form>
           </div>
-
         </div>
       </section>
     </Layout>
