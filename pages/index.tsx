@@ -81,8 +81,10 @@ const IndexPage = () => {
       <ProductsFeatured />
       <Subscribe />
       <Footer />
+
     </Layout>
   )
 }
 
 export default IndexPage
+
