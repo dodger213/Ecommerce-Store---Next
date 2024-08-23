@@ -10,6 +10,7 @@ const initialState = {
 } as CartTypes;
 
 const indexSameProduct = (state: CartTypes, action: ProductStoreType) => {
+
   const sameProduct = (product: ProductStoreType) => (
     product.id === action.id && 
     product.color === action.color && 
@@ -56,5 +57,6 @@ const cartSlice = createSlice({
   },
 })
 
-export const { addProduct, removeProduct, setCount } = cartSlice.actions
+export const { addProduct, removeProduct, setCount } = cartSlice.actions;
+
 export default cartSlice.reducer
