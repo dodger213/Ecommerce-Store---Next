@@ -5,14 +5,12 @@ import CheckoutItems from '../../components/checkout/items';
 import { RootState } from 'store';
 
 const CheckoutPage = () => {
-
   const priceTotal = useSelector((state: RootState) => {
     const cartItems = state.cart.cartItems;
     let totalPrice = 0;
     if (cartItems.length > 0) {
       cartItems.map(item => totalPrice += item.price * item.count);
     }
-
     return totalPrice;
   })
 
