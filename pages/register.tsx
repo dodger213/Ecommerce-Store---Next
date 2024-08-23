@@ -42,9 +42,7 @@ const RegisterPage = () => (
                 </label>
               </div>
             </div>
-
             <button type="button" className="btn btn--rounded btn--yellow btn-submit">Sign up</button>
-
             <p className="form__signup-link">
               <Link href="/login">
                 <a href="#">Are you already a member?</a>
