@@ -9,5 +9,5 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   // fake loading time
   setTimeout(() => {
     res.status(200).json(products);
-  }, 800);
+  }, 850);
 }
