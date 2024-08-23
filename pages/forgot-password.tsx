@@ -24,13 +24,13 @@ const ForgotPassword = () => {
         <div className="container">
           <div className="back-button-section">
             <Link href="/products">
-              <a><i className="icon-left"></i> Back to shop</a>
+              <a><i className="icon-left"></i>Back to shop</a>
             </Link>
           </div>
 
           <div className="form-block">
             <h2 className="form-block__title">Forgot your password?</h2>
-            <p className="form-block__description">Enter your email or phone number and recover your account</p>
+            <p className="form-block__description">Enter your email or phone number to recover your account</p>
 
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
               <div className="form__input-row">
@@ -76,3 +76,4 @@ const ForgotPassword = () => {
 }
 
 export default ForgotPassword
+
