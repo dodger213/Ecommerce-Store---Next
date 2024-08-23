@@ -66,4 +66,5 @@ const userSlice = createSlice({
 })
 
 export const { toggleFavProduct, setUserLogged } = userSlice.actions
+
 export default userSlice.reducer
