@@ -31,4 +31,4 @@ export const productsColors = [
   },
 ];
 
-export default productsColors;
+export default productsColors
