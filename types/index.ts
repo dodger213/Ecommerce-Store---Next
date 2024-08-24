@@ -53,7 +53,7 @@ export type ProductStoreType = {
 
 export type GtagEventType = {
   action: string;
-  category: string; 
+  category: string;
   label: string;
   value: string
 }
