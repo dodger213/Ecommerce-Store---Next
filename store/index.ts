@@ -19,14 +19,14 @@ const rootReducer = combineReducers({
   user: userReducer,
 })
 
-let store = configureStore({ 
+let store = configureStore({
   reducer,
 });
 
 const makeStore = ({ isServer }: { isServer: Boolean }) => {
   if (isServer) {
     //If it's on server side, create a store
-    return store = configureStore({ 
+    return store = configureStore({
       reducer,
     });
   } else {
@@ -39,7 +39,7 @@ const makeStore = ({ isServer }: { isServer: Boolean }) => {
 
     const persistedReducer = persistReducer(persistConfig, rootReducer); // Create a new reducer with our existing reducer
 
-    store = configureStore({ 
+    store = configureStore({
       reducer: persistedReducer,
     }); // Creating the store again
 
@@ -52,7 +52,7 @@ const makeStore = ({ isServer }: { isServer: Boolean }) => {
 
 // export an assembled wrapper
 // @ts-ignore:next-line
-export const wrapper = createWrapper(makeStore, {debug: true});
+export const wrapper = createWrapper(makeStore, { debug: true });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>
