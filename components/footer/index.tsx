@@ -17,7 +17,6 @@ const Footer = () => {
               <li><a href="#"><i className="icon-youtube-play"></i></a></li>
             </ul>
           </div>
-
           <div className="site-footer__links">
             <ul>
               <li>Shopping online</li>
@@ -43,7 +42,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
       <div className="site-footer__bottom">
         <div className="container">
           <p>DESIGN BY ICEO.CO - © 2019. ALL RIGHTS RESERVED.</p>
@@ -52,6 +50,5 @@ const Footer = () => {
     </footer>
   )
 };
-
 
 export default Footer
