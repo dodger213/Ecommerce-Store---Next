@@ -13,5 +13,4 @@ const CheckoutStatus = ({ step }: CheckoutStatusProps) => {
   )
 };
 
-
 export default CheckoutStatus
