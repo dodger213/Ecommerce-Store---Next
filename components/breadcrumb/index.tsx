@@ -9,5 +9,4 @@ const Breadcrumb = () => (
   </section>
 );
 
-
 export default Breadcrumb
