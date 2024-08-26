@@ -23,4 +23,5 @@ const Description = ({ show }: ProductDescriptionType) => {
   );
 };
 
-export default Description;
+export default Description
+
