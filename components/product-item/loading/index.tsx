@@ -1,7 +1,6 @@
 const ProductItemLoading = () => (
   <a href="#" className="product-item product-item--loading">
     <div className="product__image">
-
     </div>
 
     <div className="product__description">
@@ -12,6 +11,5 @@ const ProductItemLoading = () => (
     </div>
   </a>
 );
-
 
 export default ProductItemLoading
