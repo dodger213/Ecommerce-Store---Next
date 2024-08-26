@@ -66,7 +66,6 @@ const Header = ({ isErrorPage }: HeaderType) => {
           <a href="#">Rooms</a>
           <button className="site-nav__btn"><p>Account</p></button>
         </nav>
-
         <div className="site-header__actions">
           <button ref={searchRef} className={`search-form-wrapper ${searchOpen ? 'search-form--active' : ''}`}>
             <form className={`search-form`}>
@@ -96,6 +95,5 @@ const Header = ({ isErrorPage }: HeaderType) => {
     </header>
   )
 };
-
 
 export default Header;
